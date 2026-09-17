@@ -1,0 +1,30 @@
+# Ihar Petushkou
+
+> Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.
+
+I set up, secure, fix and automate Linux servers, and write the Python that keeps them, and the business around them, running without manual work. Around that: infrastructure as code with Ansible and Terraform, AWS, and AI agents built on Claude Code that take routine engineering work off a team. 15+ years in software engineering, the last years mostly Linux, backend and automation.
+
+## Services
+
+- Linux server setup, hardening, troubleshooting: Ubuntu, Debian, RHEL: You get a Linux server that is set up properly, secured, and easy to maintain. Or, if something is already broken, you get it found and fixed with a clear explanation of the cause.
+- Python automation scripts, integrations and AWS tools, with tests: You get Python code that does a real job and keeps doing it: a script, a CLI tool, an integration between two systems, a scraper, a data pipeline, or an automation on AWS.
+- AI agents and AI automation with Python, Claude, OpenAI or local LLMs: You get AI automation that takes real work off your team, not a chatbot demo. Emails sorted and answered in draft, support tickets routed, leads qualified, invoices and PDFs turned into clean data, weekly reports written from your numbers.
+- Bash and Python scripts for Linux: backups, deploys, cleanup, cron: You get Bash or Python scripts that automate the boring Linux work and do not break in surprising ways: backups, deploys, log and release cleanup, health checks, user management, report generation.
+- Infrastructure as code with Terraform, Ansible and Docker Compose: You get infrastructure you can rebuild from zero with three commands, instead of a server someone set up by hand two years ago.
+- AWS infrastructure setup with Terraform: VPC, EC2, RDS, S3, IAM, ECS: You get your application running on AWS the right way: secure by default, reproducible, and without a surprise bill at the end of the month.
+- Claude Code setup and AI agents for your team: CI, hooks, plugins: You get Claude Code working for your whole team, not only on one laptop: shared rules in git, safe permissions, and agents that take routine engineering work off people.
+- MCP server for Claude: connect your API, database and tools safely: You get an MCP server that lets Claude work with your own systems: your API, database, internal tools or product data, with the access you decide.
+- Self-hosted LLMs with Ollama: private AI server, RAG and team chat: You get AI that runs on your own servers: your documents, customer data and code never go to OpenAI, Google or anyone else, and there is no bill per token.
+- KVM/QEMU virtualization on VPS, dedicated or on-prem Linux servers: You get your own servers working like a small private cloud: a VPS, a dedicated machine or an on-prem box running your services in VMs or containers, secured, backed up and monitored.
+- CI/CD pipeline on GitHub Actions, GitLab CI or Jenkins, auto deploy: You get a pipeline where every push is tested and every merge is deployed, without anyone copying files to a server or running commands by hand.
+- Prometheus and Grafana monitoring, dashboards and alerts: You get dashboards that show what your servers and apps are doing right now, and alerts that wake the right person only when something really needs attention.
+- OpenAI, Claude or Gemini API integration into your app or backend: You get AI features built into your product properly: fast, reliable, with a predictable cost, and safe to put in front of real users.
+- Telegram, WhatsApp, Discord or Slack bot with AI and integrations: You get a bot that does useful work where your customers and team already are: Telegram, WhatsApp, Discord, Slack or Viber.
+- FastAPI backend with PostgreSQL, Redis, auth, Docker and API docs: You get a Python backend built on FastAPI that is fast, documented and ready for real users: the API for your web app, mobile app, SaaS or internal tool.
+
+## Links
+
+- Hire on Upwork: https://www.upwork.com/freelancers/~017c9a21e436ba9f1f
+- LinkedIn: https://www.linkedin.com/in/northelks/
+- GitHub: https://github.com/northelks
+- Norboten, the flagship project: https://norboten.org

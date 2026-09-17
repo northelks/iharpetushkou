@@ -1,0 +1,1277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ihar Petushkou · Linux Engineer, Python & AI Automation, Ansible, Terraform, AWS</title>
+<meta name="description" content="Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://iharpetushkou.com/">
+<meta name="author" content="Ihar Petushkou">
+<meta name="theme-color" content="#0a0e0c">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Ihar Petushkou">
+<meta property="og:title" content="Ihar Petushkou · Linux Engineer">
+<meta property="og:description" content="Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.">
+<meta property="og:url" content="https://iharpetushkou.com/">
+<meta property="og:image" content="https://iharpetushkou.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ihar Petushkou, Linux engineer: Python and AI automation, Ansible, Terraform, AWS">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Ihar">
+<meta property="profile:last_name" content="Petushkou">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ihar Petushkou · Linux Engineer">
+<meta name="twitter:description" content="Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.">
+<meta name="twitter:image" content="https://iharpetushkou.com/og.png">
+<link rel="icon" href="favicon.png" sizes="64x64" type="image/png">
+<link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
+<style>/* The palette, type and components of norboten.org, trimmed for one page. */
+:root {
+  --bg: #0a0e0c; --bg-raised: #101613; --bg-sunken: #070a09;
+  --line: #1e2b24; --line-strong: #2c463a;
+  --text: #e8ece9; --muted: #93a09a; --green: #4ade80; --green-dim: #2f9e5b;
+  --red: #f87171; --amber: #fbbf24;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --wide: 1180px; --text-width: 760px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 76px; }
+body {
+  margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans);
+  font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+h1, h2, h3 { color: var(--green); line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+h1, h2 { font-family: var(--mono); }
+h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); margin: 0 0 1rem; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 1rem; }
+h3 { font-size: 1.2rem; margin: 0 0 0.6rem; }
+p { margin: 0 0 1rem; }
+strong { color: #fff; font-weight: 600; }
+img, video { max-width: 100%; height: auto; }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 0 1.25rem; }
+.wrap.narrow { max-width: 880px; }
+.prose { max-width: var(--text-width); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); }
+.small { font-size: 0.85rem; }
+.center { text-align: center; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 99; background: var(--bg-raised); padding: 0.5rem 1rem; }
+
+/* header */
+header.site {
+  position: sticky; top: 0; z-index: 30; background: rgba(10, 14, 12, 0.9);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+}
+header.site .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: 60px; }
+.brand { font-family: var(--mono); font-weight: 700; color: var(--green); letter-spacing: -0.02em; font-size: 1.02rem; white-space: nowrap; }
+nav.site { display: flex; align-items: center; gap: 1.2rem; margin-left: auto; flex-wrap: wrap; }
+nav.site a:not(.btn) { color: var(--text); font-size: 0.95rem; }
+nav.site a:not(.btn):hover { color: var(--green); text-decoration: none; }
+nav.site a.cv { padding-right: 1.2rem; border-right: 1px solid var(--line-strong); }
+nav.site a.icon { color: var(--muted); border: 1px solid var(--line-strong); border-radius: 7px; padding: 0.3rem 0.5rem; display: inline-flex; }
+nav.site a.icon:hover { color: var(--green); text-decoration: none; }
+nav.site a.icon svg { display: block; }
+@media (max-width: 760px) { nav.site a:not(.btn):not(.icon) { display: none; } }
+@media (max-width: 440px) {
+  header.site .wrap { gap: 0.6rem; }
+  header.site .brand { font-size: 0.8rem; }
+  nav.site { flex-wrap: nowrap; gap: 0.5rem; }
+  nav.site .btn.small { padding: 0.35rem 0.6rem; font-size: 0.85rem; white-space: nowrap; }
+}
+
+/* buttons */
+.cta { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; }
+.btn {
+  display: inline-block; border: 1px solid var(--green-dim); color: var(--green); border-radius: 8px;
+  padding: 0.6rem 1.15rem; font-weight: 600; font-family: var(--sans); font-size: 1rem;
+  background: none; cursor: pointer; line-height: 1.3; text-align: center;
+}
+.btn:hover { background: rgba(74, 222, 128, 0.08); text-decoration: none; }
+.btn.solid { background: var(--green); color: #07120c; border-color: var(--green); }
+.btn.solid:hover { background: #6ee7a0; }
+.btn.small { padding: 0.35rem 0.8rem; font-size: 0.9rem; }
+.btn.big { padding: 0.85rem 1.6rem; font-size: 1.08rem; }
+
+/* hero */
+.hero { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--line);
+  background: radial-gradient(800px 420px at 90% 0%, rgba(74, 222, 128, 0.08), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; }
+.hero h1 .soft { color: var(--text); font-size: 0.72em; white-space: nowrap; }
+.hero .lede { font-size: 1.12rem; color: var(--muted); max-width: 60ch; }
+.hero .cta { margin: 1.8rem 0 1.2rem; }
+.hero .stack { color: #6f7d76; font-size: 0.82rem; margin: 0; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } .hero { padding-top: 2.5rem; } }
+
+/* terminal card */
+.terminal { margin: 0; background: var(--bg-sunken); border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden;
+  box-shadow: 0 30px 80px -40px rgba(74, 222, 128, 0.35); }
+.terminal .bar { display: flex; align-items: center; gap: 7px; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--line); background: var(--bg-raised); }
+.terminal .bar span { width: 11px; height: 11px; border-radius: 50%; background: #2a3530; }
+.terminal .bar em { font-style: normal; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin-left: 0.6rem; }
+.terminal .screen { padding: 1.2rem 1.3rem 1.3rem; font-family: var(--mono); font-size: 0.9rem; }
+.terminal .screen p { margin: 0 0 0.15rem; }
+.terminal .prompt { color: var(--green); margin-right: 0.4rem; }
+.terminal .out { color: var(--muted); margin-bottom: 0.7rem !important; }
+.terminal .out.ok { color: var(--green); }
+.terminal .out.bad { color: var(--red); }
+
+.who .photo-frame { position: relative; width: 100%; max-width: 173px; margin: 0 auto 1.2rem; border-radius: 10px;
+  overflow: hidden; border: 1px solid var(--line-strong); }
+.who .photo-frame .photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+/* a faint green phosphor over the photo: a tint and scanlines, never enough to hide the face */
+.who .photo-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px),
+    linear-gradient(rgba(74, 222, 128, 0.10), rgba(74, 222, 128, 0.10));
+  mix-blend-mode: normal; }
+.who .monogram { width: 100%; max-width: 173px; aspect-ratio: 1; margin: 0 auto 1.2rem; border-radius: 10px;
+  border: 1px solid var(--line-strong); }
+.who .monogram { display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 3.4rem;
+  color: var(--green); background: radial-gradient(circle at 30% 20%, #15241c, var(--bg-sunken)); }
+
+/* numbers */
+.facts-strip { border-bottom: 1px solid var(--line); background: var(--bg-sunken); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding-block: 1.6rem; }
+.facts div { display: flex; flex-direction: column; }
+.facts strong { color: var(--green); font-size: 1.9rem; line-height: 1.1; }
+.facts span { color: var(--muted); font-size: 0.92rem; }
+
+/* sections */
+.section { padding: 4.5rem 0; border-bottom: 1px solid var(--line); }
+.section.no-line { border-bottom: 0; }
+.kicker { font-family: var(--mono); font-weight: 500; color: var(--green-dim); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 0.5rem; }
+.grid { display: grid; gap: 1.1rem; }
+.grid.three { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 1.3rem 1.4rem; }
+.card p:last-child { margin-bottom: 0; }
+.tag { display: inline-block; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 999px; padding: 0.1rem 0.55rem; margin: 0 0.35rem 0.35rem 0; }
+.tags { margin: 0.8rem 0; }
+ul.ticks { list-style: none; padding: 0; margin: 0 0 1rem; }
+ul.ticks li { position: relative; padding-left: 1.3rem; margin-bottom: 0.45rem; color: var(--muted); }
+ul.ticks li::before { content: "›"; position: absolute; left: 0.2rem; color: var(--green); font-family: var(--mono); font-weight: 700; }
+ul.ticks strong { color: var(--text); font-weight: 600; }
+
+/* expertise */
+.levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 1.1rem; margin-top: 2rem; }
+.level header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; }
+.level .num { color: var(--green); font-size: 1.5rem; font-weight: 700; }
+.level:nth-child(-n+2) { border-color: var(--line-strong); }
+.level ul.ticks li { font-size: 0.95rem; }
+
+/* feature rows */
+.feature-row { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2.8rem; align-items: start; }
+.feature-row.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.feature-row.flip > figure { order: 2; }
+.feature-row figure { position: sticky; top: 84px; }
+.feature-row.project { padding-block: 3rem; border-top: 1px solid var(--line); }
+.feature-row.project:first-of-type { margin-top: 2rem; }
+.feature-row h3 { font-size: 1.45rem; }
+figure.capture { margin: 0; }
+figure.capture img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-sunken); }
+figure.capture figcaption { margin-top: 0.7rem; font-size: 0.9rem; }
+a.more { font-family: var(--mono); font-size: 0.88rem; font-weight: 500; }
+@media (max-width: 900px) {
+  .feature-row, .feature-row.flip { grid-template-columns: 1fr; gap: 1.6rem; }
+  .feature-row.flip > figure { order: 0; }
+  .feature-row figure { position: static; }
+}
+
+/* project cards */
+.grid.cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 1.4rem; padding-top: 3rem; border-top: 1px solid var(--line); }
+.project-card { display: flex; flex-direction: column; padding: 0 0 1.3rem; overflow: hidden; }
+.project-card img { display: block; width: 100%; border-bottom: 1px solid var(--line); margin-bottom: 1.1rem; }
+.project-card > :not(img) { margin-left: 1.3rem; margin-right: 1.3rem; }
+.project-card h3 { font-size: 1.1rem; }
+.project-card p.muted { font-size: 0.95rem; }
+.project-card .more { margin-top: auto; }
+details { margin: 0 0 0.6rem; }
+details summary { cursor: pointer; color: var(--green); font-family: var(--mono); font-size: 0.85rem; margin-bottom: 0.6rem; }
+details ul.ticks li, details p { font-size: 0.93rem; }
+
+/* call-to-action band */
+.band { border-bottom: 1px solid var(--line); background:
+  radial-gradient(700px 300px at 15% 50%, rgba(74, 222, 128, 0.12), transparent 70%), var(--bg-sunken); }
+.band-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 3.2rem; flex-wrap: wrap; }
+.band h2 { margin-bottom: 0.4rem; }
+.band p { margin: 0; max-width: 60ch; }
+
+/* journey */
+ol.timeline { list-style: none; margin: 2.4rem 0 0; padding: 0 0 0 2rem; position: relative; max-width: 900px; }
+ol.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 2px;
+  background: linear-gradient(var(--line-strong), var(--green-dim)); }
+ol.timeline li { position: relative; padding-bottom: 2.2rem; }
+ol.timeline li::before { content: ""; position: absolute; left: -1.95rem; top: 0.35rem; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--green-dim); }
+ol.timeline li.head::before { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.18); }
+.commit { font-size: 0.82rem; display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.2rem; }
+.commit .hash { color: var(--amber); }
+.commit .ref { color: var(--green); }
+.commit .date { color: var(--muted); }
+ol.timeline h3 { color: var(--text); margin-bottom: 0.35rem; }
+ol.timeline p.muted { margin-bottom: 0.4rem; }
+ol.timeline .tags { margin: 0.4rem 0 0; }
+
+/* video */
+video.intro { width: 100%; border-radius: 12px; border: 1px solid var(--line-strong); background: #000; margin-top: 1rem; }
+
+/* contact */
+.contact { margin-top: 2rem; }
+.contact .card { display: flex; flex-direction: column; }
+.contact .card .btn { margin-top: auto; align-self: flex-start; }
+.contact .card.primary { border-color: var(--green-dim); background: linear-gradient(180deg, rgba(74, 222, 128, 0.06), transparent 60%), var(--bg-raised); }
+
+/* footer */
+footer.site { border-top: 1px solid var(--line); padding: 2.5rem 0 3rem; color: var(--muted); font-size: 0.92rem; }
+footer.site .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--green); }
+
+/* back to the top, as on norboten.org */
+.to-top { position: fixed; right: 1.4rem; bottom: 1.4rem; z-index: 39; width: 44px; height: 44px; display: grid;
+  place-items: center; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg-raised);
+  color: var(--muted); cursor: pointer; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45); }
+.to-top[hidden] { display: none; }
+.to-top:hover { color: var(--green); border-color: var(--green-dim); }
+
+/* cookie banner */
+.consent { position: fixed; z-index: 50; left: 1rem; right: 1rem; bottom: 1rem; max-width: 560px; margin-left: auto;
+  background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 12px; padding: 1rem 1.2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); font-size: 0.92rem; }
+.consent p { margin-bottom: 0.7rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://iharpetushkou.com/#person",
+   "name": "Ihar Petushkou",
+   "jobTitle": "Linux Engineer",
+   "description": "Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.",
+   "url": "https://iharpetushkou.com/",
+   "image": "https://iharpetushkou.com/img/photo.webp",
+   "sameAs": [
+    "https://www.upwork.com/freelancers/~017c9a21e436ba9f1f",
+    "https://www.linkedin.com/in/northelks/",
+    "https://github.com/northelks"
+   ],
+   "knowsAbout": [
+    "Linux",
+    "Linux system administration",
+    "systemd",
+    "SELinux",
+    "Bash",
+    "Nginx",
+    "KVM",
+    "Python",
+    "FastAPI",
+    "AI automation",
+    "AI agents",
+    "Claude Code",
+    "Model Context Protocol",
+    "Ollama",
+    "OpenAI API",
+    "Ansible",
+    "Terraform",
+    "Amazon Web Services",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "GitHub Actions",
+    "Prometheus",
+    "Grafana",
+    "PostgreSQL"
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://iharpetushkou.com/#service",
+   "name": "Ihar Petushkou: Linux engineering, Python & AI automation",
+   "url": "https://iharpetushkou.com/",
+   "image": "https://iharpetushkou.com/og.png",
+   "description": "Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.",
+   "founder": {
+    "@id": "https://iharpetushkou.com/#person"
+   },
+   "areaServed": "Worldwide",
+   "availableLanguage": "English",
+   "sameAs": [
+    "https://www.upwork.com/freelancers/~017c9a21e436ba9f1f",
+    "https://www.linkedin.com/in/northelks/",
+    "https://github.com/northelks"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Linux server setup, hardening, troubleshooting: Ubuntu, Debian, RHEL",
+       "description": "You get a Linux server that is set up properly, secured, and easy to maintain. Or, if something is already broken, you get it found and fixed with a clear explanation of the cause."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Python automation scripts, integrations and AWS tools, with tests",
+       "description": "You get Python code that does a real job and keeps doing it: a script, a CLI tool, an integration between two systems, a scraper, a data pipeline, or an automation on AWS."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AI agents and AI automation with Python, Claude, OpenAI or local LLMs",
+       "description": "You get AI automation that takes real work off your team, not a chatbot demo. Emails sorted and answered in draft, support tickets routed, leads qualified, invoices and PDFs turned into clean data, weekly reports written from your numbers."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Bash and Python scripts for Linux: backups, deploys, cleanup, cron",
+       "description": "You get Bash or Python scripts that automate the boring Linux work and do not break in surprising ways: backups, deploys, log and release cleanup, health checks, user management, report generation."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Infrastructure as code with Terraform, Ansible and Docker Compose",
+       "description": "You get infrastructure you can rebuild from zero with three commands, instead of a server someone set up by hand two years ago."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AWS infrastructure setup with Terraform: VPC, EC2, RDS, S3, IAM, ECS",
+       "description": "You get your application running on AWS the right way: secure by default, reproducible, and without a surprise bill at the end of the month."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Claude Code setup and AI agents for your team: CI, hooks, plugins",
+       "description": "You get Claude Code working for your whole team, not only on one laptop: shared rules in git, safe permissions, and agents that take routine engineering work off people."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "MCP server for Claude: connect your API, database and tools safely",
+       "description": "You get an MCP server that lets Claude work with your own systems: your API, database, internal tools or product data, with the access you decide."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Self-hosted LLMs with Ollama: private AI server, RAG and team chat",
+       "description": "You get AI that runs on your own servers: your documents, customer data and code never go to OpenAI, Google or anyone else, and there is no bill per token."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "KVM/QEMU virtualization on VPS, dedicated or on-prem Linux servers",
+       "description": "You get your own servers working like a small private cloud: a VPS, a dedicated machine or an on-prem box running your services in VMs or containers, secured, backed up and monitored."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "CI/CD pipeline on GitHub Actions, GitLab CI or Jenkins, auto deploy",
+       "description": "You get a pipeline where every push is tested and every merge is deployed, without anyone copying files to a server or running commands by hand."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Prometheus and Grafana monitoring, dashboards and alerts",
+       "description": "You get dashboards that show what your servers and apps are doing right now, and alerts that wake the right person only when something really needs attention."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "OpenAI, Claude or Gemini API integration into your app or backend",
+       "description": "You get AI features built into your product properly: fast, reliable, with a predictable cost, and safe to put in front of real users."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Telegram, WhatsApp, Discord or Slack bot with AI and integrations",
+       "description": "You get a bot that does useful work where your customers and team already are: Telegram, WhatsApp, Discord, Slack or Viber."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "FastAPI backend with PostgreSQL, Redis, auth, Docker and API docs",
+       "description": "You get a Python backend built on FastAPI that is fast, documented and ready for real users: the API for your web app, mobile app, SaaS or internal tool."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://iharpetushkou.com/#website",
+   "url": "https://iharpetushkou.com/",
+   "name": "Ihar Petushkou",
+   "publisher": {
+    "@id": "https://iharpetushkou.com/#person"
+   },
+   "inLanguage": "en"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">[ Ihar Petushkou ]</a>
+    <nav class="site" aria-label="Sections">
+      
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+      
+      <a class="cv" href="#cv" data-track="click_cv" data-position="header">CV</a>
+      <a class="btn solid small" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="header">Hire me on Upwork</a>
+      <a class="icon" href="https://www.linkedin.com/in/northelks/" rel="noopener" aria-label="LinkedIn" title="LinkedIn" data-track="click_linkedin" data-position="header"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Ihar Petushkou · freelance</div>
+      <h1>Linux engineer.<br><span class="soft">Python &amp; AI automation.</span></h1>
+      <p class="lede">I set up, secure, fix and automate Linux servers, and write the Python that keeps them, and the business around them, running without manual work. Around that: infrastructure as code with Ansible and Terraform, AWS, and AI agents built on Claude Code that take routine engineering work off a team. 15+ years in software engineering, the last years mostly Linux, backend and automation.</p>
+      <div class="cta">
+        <a class="btn solid" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="hero">Work with me on Upwork</a>
+        <a class="btn" href="https://www.linkedin.com/in/northelks/" rel="noopener" data-track="click_linkedin" data-position="hero">Message me on LinkedIn</a>
+      </div>
+      <p class="stack mono">linux · python · ai agents · ansible · terraform · aws · claude code · mcp · ollama</p>
+    </div>
+    <figure class="terminal who" aria-label="About me">
+      <div class="bar"><span></span><span></span><span></span><em>ihar@work: ~</em></div>
+      <div class="screen">
+        
+        <div class="photo-frame"><img class="photo" src="img/photo.webp" width="520" height="520" alt="Ihar Petushkou, Linux engineer" fetchpriority="high"></div>
+        
+        <p><span class="prompt">$</span> whoami</p>
+        <p class="out">Ihar Petushkou, Linux engineer</p>
+        <p><span class="prompt">$</span> systemctl is-active freelance</p>
+        <p class="out ok">active</p>
+        <p><span class="prompt">$</span> cat focus.txt</p>
+        <p class="out">servers that stay up · work that runs itself</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="facts-strip" aria-label="In numbers">
+  <div class="wrap facts">
+    
+    <div><strong class="mono">15+</strong><span>years in software engineering and Linux infrastructure</span></div>
+    
+    <div><strong class="mono">4,000+</strong><span>total hours on Upwork</span></div>
+    
+    <div><strong class="mono">40+</strong><span>hands-on Linux labs built in Norboten</span></div>
+    
+    <div><strong class="mono">10</strong><span>lab tracks, from RHCSA to MCP</span></div>
+    
+  </div>
+</section>
+
+
+
+<section class="section" id="expertise">
+  <div class="wrap">
+    <div class="kicker">Expertise</div>
+    <h2>What I do, in order of weight</h2>
+    <p class="prose muted">Linux first: it is under everything else. Then the Python and AI that
+      take manual work away, the infrastructure code that makes it repeatable, and the Claude
+      tooling that lets an AI agent help without getting open access.</p>
+    <div class="levels">
+      
+      <article class="card level">
+        <header>
+          <span class="mono num">01</span>
+          <span class="tag">Core</span>
+        </header>
+        <h3>Linux engineering</h3>
+        <ul class="ticks">
+          
+          <li><strong>Server setup, hardening and migration:</strong> Ubuntu, Debian, Fedora, Rocky Linux, RHEL, Alpine</li>
+          
+          <li><strong>Administration:</strong> users, patching, logs, cron, capacity</li>
+          
+          <li>systemd services, timers and drop-ins, boot problems and emergency mode recovery</li>
+          
+          <li><strong>Storage:</strong> LVM, filesystems, swap, fstab, disks that fill up for no visible reason</li>
+          
+          <li>SELinux, AppArmor, firewalld, ufw, fail2ban, SSH hardening, TLS, automatic security updates</li>
+          
+          <li>Nginx and Caddy reverse proxies with certificates that renew themselves</li>
+          
+          <li>KVM/QEMU virtualization, VPS, dedicated and on-prem servers</li>
+          
+          <li>Monitoring with Prometheus, Grafana, Loki and Alertmanager; backups that are restore-tested</li>
+          
+        </ul>
+      </article>
+      
+      <article class="card level">
+        <header>
+          <span class="mono num">02</span>
+          <span class="tag">Python</span>
+        </header>
+        <h3>Python &amp; AI automation</h3>
+        <ul class="ticks">
+          
+          <li><strong>Python automation:</strong> scripts, CLI tools and terminal apps (Typer, Textual) that teams actually use</li>
+          
+          <li><strong>FastAPI backends:</strong> REST APIs, WebSockets and live streams, auth, rate limits, background jobs</li>
+          
+          <li><strong>Python on AWS:</strong> boto3, Lambda, S3, SQS, DynamoDB, EventBridge jobs</li>
+          
+          <li>AI agents on Claude, OpenAI or Gemini that act through tools, with human approval for anything risky</li>
+          
+          <li><strong>Private AI on Ollama:</strong> local models on your own servers, secured and measured for the task</li>
+          
+          <li><strong>Email, ticket and document processing:</strong> classify, extract, summarize, draft the reply</li>
+          
+          <li>Bots on Telegram, Slack, Discord and WhatsApp; workflow tools like n8n, Make or Zapier when a team already uses them</li>
+          
+        </ul>
+      </article>
+      
+      <article class="card level">
+        <header>
+          <span class="mono num">03</span>
+          <span class="tag">Infrastructure</span>
+        </header>
+        <h3>Ansible, Terraform, AWS</h3>
+        <ul class="ticks">
+          
+          <li><strong>Ansible:</strong> roles and playbooks that re-run cleanly, secrets in Vault, no one-off SSH sessions</li>
+          
+          <li><strong>Terraform:</strong> AWS environments as code with modules and remote state</li>
+          
+          <li><strong>AWS:</strong> EC2, VPC, IAM, S3, RDS, Lambda, ECS, EKS, CloudWatch, Route 53, SQS, Secrets Manager</li>
+          
+          <li>Docker, Compose and Kubernetes (EKS, Helm, ArgoCD): multi-service stacks, deploys with rollback</li>
+          
+          <li><strong>CI/CD with GitHub Actions, GitLab CI and Jenkins:</strong> test, build and deploy on every push</li>
+          
+        </ul>
+      </article>
+      
+      <article class="card level">
+        <header>
+          <span class="mono num">04</span>
+          <span class="tag">AI engineering</span>
+        </header>
+        <h3>Claude Code, MCP, AI Agents</h3>
+        <ul class="ticks">
+          
+          <li><strong>Claude Code set up for a team:</strong> CLAUDE.md, permission rules, hooks, subagents, skills and plugins, kept in git</li>
+          
+          <li><strong>Headless Claude Code in CI:</strong> jobs that triage issues, review pull requests and draft release notes</li>
+          
+          <li><strong>MCP servers for Claude:</strong> your API and data as tools, resources and prompts, Streamable HTTP, OAuth, read-only first</li>
+          
+          <li>Custom agents on the Claude Agent SDK and the Claude API</li>
+          
+          <li><strong>Costs under control:</strong> event triggers, turn caps, the cheapest model per job</li>
+          
+        </ul>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" id="norboten">
+  <div class="wrap feature-row">
+    <figure class="capture">
+      <img src="img/norboten-check.svg" alt="The Norboten terminal app: doctor's checks of this machine, the base images and the account and sessions beside them" loading="lazy" width="1100" height="700">
+      <figcaption class="muted">The Norboten terminal app, as it renders: the sections along the
+        top, doctor's checks of the machine, and the base images the labs boot from.</figcaption>
+    </figure>
+    <div>
+      <div class="kicker">Flagship project</div>
+      <h2>Norboten</h2>
+      <p class="muted">My open-source platform where people learn Linux by fixing real broken machines. I built all of it:</p>
+      <ul class="ticks">
+        <li>A Python terminal app that boots a real VM (QEMU/KVM + Lima), breaks it on purpose, then grades the fix by checking the machine, rebooting it and checking again</li><li>Over 40 hands-on labs: RHCSA, Linux, Bash, Python, Ansible, Docker, Terraform, AI agents, Ollama, Claude Code and MCP. CI proves every lab solvable on a clean machine before it can merge</li><li>An MCP server that gives Claude the platform itself: labs, journals and your progress as tools, resources and prompts, with OAuth sign-in</li><li>The whole server as code: Ansible, Docker Compose, a one-command Python installer for a fresh VPS, and GitHub Actions with deploy and rollback</li><li>FastAPI on PostgreSQL and Redis, live terminal streaming, Prometheus and Grafana</li><li>Claude Code agents run the chores in GitHub Actions, each with a turn cap, a tool allowlist and a measured cost. A Claude Code plugin turns an idea into a new lab, questions or a journal</li><li>An AI tutor that runs on the learner&#39;s own Claude Code or local model and never sees the solution</li><li>1,000+ automated tests</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="https://norboten.org" rel="noopener" data-track="click_norboten" data-position="flagship">norboten.org</a>
+        <a class="btn" href="https://github.com/northelks/norboten" rel="noopener" data-track="click_github" data-position="flagship">Source on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h2>What you can hire me for</h2>
+    <p class="prose muted">Each of these is a fixed-price project on my Upwork profile, with clear
+      tiers and delivery days. Anything close to them works too: send me the details.</p>
+  </div>
+  
+  <div class="wrap feature-row project" id="p01">
+    <figure class="capture">
+      <img src="img/01-linux-systems.webp" alt="Linux servers that boot, stay up and survive a reboot" width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">Linux &amp; Systems</div>
+      <h3>Linux server setup, hardening, troubleshooting: Ubuntu, Debian, RHEL</h3>
+      
+        <p class="muted">You get a Linux server that is set up properly, secured, and easy to maintain. Or, if something is already broken, you get it found and fixed with a clear explanation of the cause.</p>
+      
+        <p class="muted">I work with Ubuntu, Debian, Fedora, Rocky Linux, RHEL and Alpine. Typical work: services that will not start or keep crashing, disks that fill up, servers stuck in emergency mode after a reboot, SELinux or AppArmor denials, broken networking, slow machines.</p>
+      
+        <p class="muted">For new servers I do the full setup: users and sudo, SSH keys only, firewall, fail2ban, automatic security updates, Nginx or Caddy with TLS, systemd services, backups that are actually tested by restoring them.</p>
+      
+        <p class="muted">Every fix is checked after a reboot, because a fix that disappears on the next boot is not a fix. I built my own platform, Norboten, around exactly this idea: it breaks real Linux VMs on purpose and grades the fix before and after a reboot.</p>
+      
+        <p class="muted">On the Advanced tier the whole setup is an Ansible playbook in git, so the server can be rebuilt from zero in minutes.</p>
+      
+      <p class="tags"><span class="tag">linux server</span><span class="tag">server hardening</span><span class="tag">linux administration</span><span class="tag">ubuntu server</span><span class="tag">troubleshooting</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-01">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap feature-row project flip" id="p03">
+    <figure class="capture">
+      <img src="img/03-python-engineering.webp" alt="Python tools that run on schedule and tell you when they fail" width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">Python Engineering</div>
+      <h3>Python automation scripts, integrations and AWS tools, with tests</h3>
+      
+        <p class="muted">You get Python code that does a real job and keeps doing it: a script, a CLI tool, an integration between two systems, a scraper, a data pipeline, or an automation on AWS.</p>
+      
+        <p class="muted">Not a quick hack that works once on my laptop. The code has clear config, logging, timeouts and retries, exits with a proper status when something is wrong, and comes with tests and a README.</p>
+      
+        <p class="muted">What I often build:</p>
+      
+        <ul class="ticks"><li>scripts that pull data from APIs, clean it and push it to a database, Google Sheets or S3</li><li>AWS automation with boto3: EC2 and S3 housekeeping, cost reports, Lambda functions on a schedule</li><li>web scraping with Playwright or httpx</li><li>CLI tools and terminal apps (Typer, Textual) for internal teams</li><li>jobs that run under cron, systemd timers or EventBridge</li></ul>
+      
+        <p class="muted">My own project, Norboten, is a Python terminal app that boots, breaks and grades real Linux VMs over SSH, with 1,000+ tests. One of its labs is about the bugs that usually hide in Python jobs: errors swallowed silently, no timeouts, and files half-written on a crash.</p>
+      
+        <p class="muted">Python 3.12, uv, ruff, pytest, Pydantic, asyncio.</p>
+      
+      <p class="tags"><span class="tag">python developer</span><span class="tag">python automation</span><span class="tag">python script</span><span class="tag">boto3</span><span class="tag">data pipeline</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-03">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap feature-row project" id="p04">
+    <figure class="capture">
+      <img src="img/04-ai-automation.webp" alt="AI that does the work, with a human approving what matters" width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">AI Automation (AI agents, Python)</div>
+      <h3>AI agents and AI automation with Python, Claude, OpenAI or local LLMs</h3>
+      
+        <p class="muted">You get AI automation that takes real work off your team, not a chatbot demo. Emails sorted and answered in draft, support tickets routed, leads qualified, invoices and PDFs turned into clean data, weekly reports written from your numbers.</p>
+      
+        <p class="muted">I build it in Python, on Anthropic Claude, OpenAI, Google Gemini, or local models on Ollama when your data must not leave your server. It runs as a small service or scheduled job on your server or AWS, next to the tools you already have.</p>
+      
+        <p class="muted">How I keep it reliable:</p>
+      
+        <ul class="ticks"><li>the AI returns structured data that is validated, not free text that breaks the next step</li><li>agents act only through tools I define, never with open access to your systems</li><li>anything risky (sending, deleting, paying) waits for a human to approve it in Slack or Telegram</li><li>I test models on your real examples and pick the cheapest one that is accurate enough</li></ul>
+      
+        <p class="muted">In my project Norboten, an AI tutor helps people fix broken Linux servers, on their own Claude Code. It never receives the answer, and every reply is checked before it is shown, so it cannot leak it. Issue labels come from a small Claude model held to a fixed list: it ignored a prompt injection hidden in an issue, for under a cent.</p>
+      
+      <p class="tags"><span class="tag">ai agent</span><span class="tag">ai automation</span><span class="tag">python automation</span><span class="tag">openai</span><span class="tag">llm automation</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-04">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap feature-row project flip" id="p06">
+    <figure class="capture">
+      <img src="img/06-bash-python-tooling.webp" alt="Scripts that fail loudly, never silently" width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">Bash tooling + Python</div>
+      <h3>Bash and Python scripts for Linux: backups, deploys, cleanup, cron</h3>
+      
+        <p class="muted">You get Bash or Python scripts that automate the boring Linux work and do not break in surprising ways: backups, deploys, log and release cleanup, health checks, user management, report generation.</p>
+      
+        <p class="muted">Most scripts I get asked to fix have the same problems: no error handling, so they report success after failing, unquoted paths that break on a file name with a space, a cron job that works by hand but not at 3am, a cleanup that deletes the wrong files. I write scripts so these cannot happen:</p>
+      
+        <ul class="ticks"><li>set -euo pipefail, checked exit codes, a clear message when something fails</li><li>safe quoting, safe temp files, atomic moves</li><li>a --dry-run mode for anything that deletes</li><li>ShellCheck clean, with --help</li><li>scheduled by systemd timers or cron with the right environment</li></ul>
+      
+        <p class="muted">When Bash starts to get long, I switch to Python for proper data handling, retries and tests.</p>
+      
+        <p class="muted">In my project Norboten I wrote hands-on labs about exactly these bugs: a deploy script that took a site down, a cleanup that kept the wrong releases, a backup script that lied. They are graded by actually running the scripts, not by reading them.</p>
+      
+      <p class="tags"><span class="tag">bash script</span><span class="tag">shell script</span><span class="tag">linux automation</span><span class="tag">python script</span><span class="tag">cron job</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-06">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap feature-row project" id="p05">
+    <figure class="capture">
+      <img src="img/05-ansible-terraform-docker.webp" alt="terraform apply, ansible-playbook, docker compose up. Done." width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">Ansible + Terraform + Docker</div>
+      <h3>Infrastructure as code with Terraform, Ansible and Docker Compose</h3>
+      
+        <p class="muted">You get infrastructure you can rebuild from zero with three commands, instead of a server someone set up by hand two years ago.</p>
+      
+        <p class="muted">Terraform creates the cloud side: servers, network, firewall, DNS, storage, IAM. Ansible configures the machines: users, SSH, packages, hardening, services. Docker Compose runs your app and its dependencies the same way on a laptop and in production. Everything lives in git.</p>
+      
+        <p class="muted">What I pay attention to:</p>
+      
+        <ul class="ticks"><li>Terraform state stored safely, with no secrets in plain text</li><li>playbooks that run twice without changing anything the second time</li><li>secrets in Ansible Vault or AWS SSM, never in the repo</li><li>a real test: I destroy and rebuild the environment before handing it over</li></ul>
+      
+        <p class="muted">Works with AWS, Hetzner, netcup, DigitalOcean, GCP or bare metal.</p>
+      
+        <p class="muted">My own project, Norboten, runs this way: Ansible bootstraps and hardens the server and also builds the VM images, one Docker Compose project runs the backend (API, PostgreSQL, Redis, Ollama, Prometheus, Grafana), and a Python installer sets up a fresh VPS in one command. The playbook is rehearsed on a local VM first. I also wrote hands-on labs about Terraform and Ansible mistakes, so I know where they usually go wrong.</p>
+      
+      <p class="tags"><span class="tag">terraform</span><span class="tag">ansible</span><span class="tag">docker compose</span><span class="tag">infrastructure as code</span><span class="tag">devops</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-05">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap feature-row project flip" id="p08">
+    <figure class="capture">
+      <img src="img/08-aws.webp" alt="AWS set up right the first time, in Terraform" width="960" height="720" loading="lazy">
+    </figure>
+    <div>
+      <div class="kicker">AWS core services</div>
+      <h3>AWS infrastructure setup with Terraform: VPC, EC2, RDS, S3, IAM, ECS</h3>
+      
+        <p class="muted">You get your application running on AWS the right way: secure by default, reproducible, and without a surprise bill at the end of the month.</p>
+      
+        <p class="muted">Everything is built with Terraform, so the whole environment is code in your git repository, not clicks in the console that nobody can repeat.</p>
+      
+        <p class="muted">What I set up:</p>
+      
+        <ul class="ticks"><li>VPC with public and private subnets, security groups, NAT only where needed</li><li>compute on EC2, ECS Fargate, EKS or Lambda, depending on the app</li><li>RDS PostgreSQL or MySQL with automated backups, S3 with lifecycle rules</li><li>IAM roles with least privilege, no access keys on servers, secrets in Secrets Manager or SSM</li><li>Route 53, ACM certificates, CloudFront or a load balancer</li><li>CloudWatch logs and alarms, budget alerts</li></ul>
+      
+        <p class="muted">Already on AWS? The Starter tier is a review of your account: open security groups, unused resources, missing backups, IAM users with too much power. You get a report and the most important fixes.</p>
+      
+        <p class="muted">I have also built mobile and web products with their backends on AWS for years, so I understand the app side, not only the cloud side.</p>
+      
+      <p class="tags"><span class="tag">aws</span><span class="tag">amazon web services</span><span class="tag">aws terraform</span><span class="tag">aws ec2</span><span class="tag">cloud infrastructure</span></p>
+      <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-08">See the packages on Upwork →</a>
+    </div>
+  </div>
+  
+  <div class="wrap">
+    <div class="grid cards">
+      
+      <article class="card project-card" id="p02">
+        <img src="img/02-claude-code-agents.webp" alt="Claude Code agents with a turn cap, a tool allowlist and a bill you can predict" width="960" height="720" loading="lazy">
+        <div class="kicker">Claude Code &amp; AI agents</div>
+        <h3>Claude Code setup and AI agents for your team: CI, hooks, plugins</h3>
+        <p class="muted">You get Claude Code working for your whole team, not only on one laptop: shared rules in git, safe permissions, and agents that take routine engineering work off people.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">What I set up:</p>
+          
+            <ul class="ticks"><li>CLAUDE.md, settings and permission rules, so Claude knows the project and cannot touch what it should not</li><li>hooks that format, lint and block risky commands on their own</li><li>subagents and skills for the tasks your team repeats: reviews, migrations, new endpoints, docs</li><li>headless Claude Code jobs in CI: issue triage, pull request review, release notes, fixes drafted as pull requests a human merges</li><li>plugins that share those skills, agents and hooks across all your repositories</li></ul>
+          
+            <p class="muted">The cost stays predictable. Agents run on events, not on a timer. Every job has a turn cap, a tool allowlist and the cheapest model that does it well. Tests run against a fake API, so they cost nothing.</p>
+          
+            <p class="muted">In my project Norboten, headless Claude Code runs in GitHub Actions: issue triage, release notes, and new labs drafted as draft pull requests. I measured every job on real runs: labelling an issue costs under a cent. Its Claude Code plugin turns an idea into a new lab.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">claude code</span><span class="tag">claude ai</span><span class="tag">ai agents</span><span class="tag">claude code plugins</span><span class="tag">ai devops automation</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-02">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p15">
+        <img src="img/15-claude-mcp-servers.webp" alt="Claude reads your systems through an MCP server with sign-in, scopes and an audit log" width="960" height="720" loading="lazy">
+        <div class="kicker">MCP servers for Claude</div>
+        <h3>MCP server for Claude: connect your API, database and tools safely</h3>
+        <p class="muted">You get an MCP server that lets Claude work with your own systems: your API, database, internal tools or product data, with the access you decide.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">What I build:</p>
+          
+            <ul class="ticks"><li>MCP tools for the actions Claude may take, resources for the data it may read, prompts for the tasks your team repeats</li><li>a local server for Claude Code and Claude Desktop, or a remote one over Streamable HTTP for your whole team or your customers</li><li>OAuth sign-in and per-user scopes, so Claude only sees what that person may see</li><li>read-only first; anything that changes data asks for confirmation and lands in an audit log</li><li>tests with MCP Inspector and in CI, and a Docker deploy</li></ul>
+          
+            <p class="muted">Safety is part of the build, not an extra: tool results are treated as untrusted text, secrets never reach the model, and every tool has limits.</p>
+          
+            <p class="muted">In my project Norboten, an MCP server gives Claude the platform itself: labs, journals and a learner&#39;s progress, with sign-in. I also wrote a track of six hands-on labs about MCP going wrong: a file server that shows everything, a fetched page that gives the agent orders, a token accepted for the wrong audience, a server that breaks its own stdout, a stream a proxy cuts off.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">mcp server</span><span class="tag">model context protocol</span><span class="tag">claude mcp</span><span class="tag">ai integration</span><span class="tag">claude code</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-15">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p14">
+        <img src="img/14-ollama-private-ai.webp" alt="Your own AI server: the data never leaves, the model is measured, not guessed" width="960" height="720" loading="lazy">
+        <div class="kicker">Ollama &amp; private AI (self-hosted LLMs)</div>
+        <h3>Self-hosted LLMs with Ollama: private AI server, RAG and team chat</h3>
+        <p class="muted">You get AI that runs on your own servers: your documents, customer data and code never go to OpenAI, Google or anyone else, and there is no bill per token.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">I set up Ollama on your Linux server, a GPU box or a VPS, and make it production-ready:</p>
+          
+            <ul class="ticks"><li>models picked for your hardware and your task, by measuring speed, memory and answer quality on your own examples</li><li>TLS, authentication and rate limits, because an open Ollama port is a real security hole</li><li>a chat for your team (Open WebUI) that answers from your documents</li><li>an OpenAI-compatible API, so your apps and scripts can switch to the local model with a config change</li><li>structured JSON output, streaming, monitoring and backups</li></ul>
+          
+            <p class="muted">In my project Norboten, Ollama runs in the same Docker Compose stack as the API and answers the site&#39;s chat assistant. I measured instead of guessing: the 0.5B model answered 8 of 10 test questions and the 1.5B model 9, so the small one stays and the server needs far less memory. Four hands-on labs are about Ollama going wrong: behind Nginx, open to the network, a context too short for its rules, a model too big for its memory.</p>
+          
+            <p class="muted">Plus 15+ years of engineering and Linux administration underneath.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">ollama</span><span class="tag">local llm</span><span class="tag">self-hosted ai</span><span class="tag">private llm</span><span class="tag">rag</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-14">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p09">
+        <img src="img/09-kvm-onprem.webp" alt="Your own hardware, set up like a cloud" width="960" height="720" loading="lazy">
+        <div class="kicker">KVM/QEMU + Lima, on-prem, VPS and dedicated servers</div>
+        <h3>KVM/QEMU virtualization on VPS, dedicated or on-prem Linux servers</h3>
+        <p class="muted">You get your own servers working like a small private cloud: a VPS, a dedicated machine or an on-prem box running your services in VMs or containers, secured, backed up and monitored.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">For steady workloads, a dedicated server often costs a fraction of the same capacity on AWS or GCP. The trade-off is that someone has to set it up properly. That is what I do.</p>
+          
+            <p class="muted">What I set up:</p>
+          
+            <ul class="ticks"><li>KVM with libvirt, or Proxmox if you want a web UI</li><li>VM templates from official cloud images with cloud-init, so a new VM takes a minute</li><li>bridged or private networking, WireGuard between sites</li><li>storage with LVM or ZFS, snapshots, and backups that are restore-tested</li><li>Docker Compose for services, Caddy or Nginx with TLS in front</li><li>Prometheus and Grafana to see what the host is doing</li></ul>
+          
+            <p class="muted">I built my own platform, Norboten, on QEMU/KVM and Lima: it starts a real Linux VM from a prepared image, snapshots its disk and resets it in about 10 seconds. I tuned the images so Alpine boots in 7 seconds instead of 22, and built serial console access for VMs that are stuck at boot. Its server side is designed for one VPS or bare-metal machine.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">kvm</span><span class="tag">qemu</span><span class="tag">virtualization</span><span class="tag">dedicated server</span><span class="tag">self hosting</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-09">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p07">
+        <img src="img/07-cicd.webp" alt="Push, test, build, deploy. No one logs into the server" width="960" height="720" loading="lazy">
+        <div class="kicker">CI/CD with GitHub Actions, GitLab CI and Jenkins</div>
+        <h3>CI/CD pipeline on GitHub Actions, GitLab CI or Jenkins, auto deploy</h3>
+        <p class="muted">You get a pipeline where every push is tested and every merge is deployed, without anyone copying files to a server or running commands by hand.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">I build pipelines on GitHub Actions, GitLab CI and Jenkins for web backends, Python and Node.js services, Docker apps and mobile apps.</p>
+          
+            <p class="muted">A typical pipeline:</p>
+          
+            <ul class="ticks"><li>lint and tests on every pull request, with caching so it stays fast</li><li>Docker images built for amd64 and arm64 and pushed to GHCR, ECR or Docker Hub</li><li>deploy to a VPS over SSH, to AWS (ECS, EC2, Lambda) or to Kubernetes</li><li>the deploy waits for a health check, and rolls back on its own if the new version is not healthy</li><li>secrets in the CI secret store, a manual approval before production, a message in Slack when it is done</li></ul>
+          
+            <p class="muted">In my own project, Norboten, GitHub Actions runs 1,000+ tests, builds multi-arch images and deploys with automatic rollback. Another pipeline boots a clean Linux VM or container for every lab and proves it can be solved before the change can merge.</p>
+          
+            <p class="muted">I also have 7+ years of mobile development, so App Store and Google Play release pipelines are familiar ground.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">ci/cd</span><span class="tag">github actions</span><span class="tag">gitlab ci</span><span class="tag">jenkins</span><span class="tag">deployment pipeline</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-07">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p11">
+        <img src="img/11-monitoring.webp" alt="Know about the problem before your users do" width="960" height="720" loading="lazy">
+        <div class="kicker">Monitoring and dashboards with Prometheus and Grafana</div>
+        <h3>Prometheus and Grafana monitoring, dashboards and alerts</h3>
+        <p class="muted">You get dashboards that show what your servers and apps are doing right now, and alerts that wake the right person only when something really needs attention.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">I set up Prometheus, Grafana, Alertmanager and Loki on your servers or in Kubernetes, and connect everything you run:</p>
+          
+            <ul class="ticks"><li>Linux hosts: CPU, memory, disk, network, systemd services</li><li>Docker containers, Nginx, PostgreSQL, MySQL, Redis</li><li>your own application: request rates, errors, latency, queue sizes</li><li>business numbers straight from your database: signups, orders, revenue per day</li></ul>
+          
+            <p class="muted">Alerts go to Telegram, Slack or email, with rules tuned so you do not start ignoring them: disk filling up in the next 24 hours, error rate above normal, a backup that did not run.</p>
+          
+            <p class="muted">Dashboards and alert rules are files in git, provisioned automatically, so a rebuilt server gets the exact same monitoring back.</p>
+          
+            <p class="muted">My own project, Norboten, exports metrics from its FastAPI backend, PostgreSQL and the host to Prometheus, with Grafana and its data sources provisioned from the repository. It also has an analytics section built with pandas and scikit-learn from the database.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">grafana</span><span class="tag">prometheus</span><span class="tag">monitoring</span><span class="tag">grafana dashboard</span><span class="tag">alerting</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-11">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p12">
+        <img src="img/12-llm-api-integration.webp" alt="One AI layer, any model, measured on your data" width="960" height="720" loading="lazy">
+        <div class="kicker">OpenAI / Anthropic / Gemini API integration</div>
+        <h3>OpenAI, Claude or Gemini API integration into your app or backend</h3>
+        <p class="muted">You get AI features built into your product properly: fast, reliable, with a predictable cost, and safe to put in front of real users.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">I integrate the OpenAI, Anthropic Claude and Google Gemini APIs, or open models on Ollama, into Python and Node.js backends, web apps and Flutter mobile apps.</p>
+          
+            <p class="muted">What production-ready means here:</p>
+          
+            <ul class="ticks"><li>responses stream to the user, so nothing hangs for 20 seconds</li><li>structured outputs checked against a schema, so your code never parses broken JSON</li><li>function calling so the model can use your data and actions, but only the ones you allow</li><li>retries, timeouts, rate and cost limits per user</li><li>fallback to another model or provider when one is down</li><li>a test set of real examples, so a prompt change or model switch is measured, not guessed</li></ul>
+          
+            <p class="muted">In my platform Norboten, one provider layer picks Claude (Claude Code or the API), OpenAI, Gemini or local Ollama by model name. The AI tutor never receives the lab&#39;s solution, and every answer is checked before it is shown. New quiz questions are answered blind by two other models, checked by a critic and a sandbox, then read by a person.</p>
+          
+            <p class="muted">Plus 10+ years of mobile, frontend and backend work, so the AI fits into your app.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">openai api</span><span class="tag">chatgpt integration</span><span class="tag">claude api</span><span class="tag">gemini api</span><span class="tag">llm integration</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-12">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p10">
+        <img src="img/10-bots-integrations.webp" alt="Bots that do real work inside your chats" width="960" height="720" loading="lazy">
+        <div class="kicker">Telegram, Discord, WhatsApp, Slack bots and integrations</div>
+        <h3>Telegram, WhatsApp, Discord or Slack bot with AI and integrations</h3>
+        <p class="muted">You get a bot that does useful work where your customers and team already are: Telegram, WhatsApp, Discord, Slack or Viber.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">Common bots I build:</p>
+          
+            <ul class="ticks"><li>customer support bots that answer from your own FAQ and documents, and hand off to a person when they are unsure</li><li>order, booking and lead bots connected to your CRM, Google Sheets or database</li><li>internal bots: alerts from servers and apps, daily reports, approvals (&#34;approve this refund?&#34; with two buttons)</li><li>community bots for Discord: roles, moderation, announcements</li><li>bots with payments through Stripe or Telegram Payments</li></ul>
+          
+            <p class="muted">Built in Python (aiogram, discord.py, Slack Bolt, WhatsApp Cloud API), with FastAPI webhooks and a database behind them. AI answers use OpenAI, Anthropic Claude or Gemini, with limits so a busy day does not become a big bill.</p>
+          
+            <p class="muted">The bot runs on your server or a cheap VPS in Docker, restarts on its own, and logs every error. You own the code and the bot account.</p>
+          
+            <p class="muted">In my project Norboten, a chat assistant on every page answers from the project&#39;s docs, streams its replies, and checks each answer before it goes out.</p>
+          
+            <p class="muted">Plus: 10+ years of mobile and backend development, so a bot can grow into a full app if you need it.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">telegram bot</span><span class="tag">whatsapp bot</span><span class="tag">discord bot</span><span class="tag">slack bot</span><span class="tag">chatbot</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-10">See the packages on Upwork →</a>
+      </article>
+      
+      <article class="card project-card" id="p13">
+        <img src="img/13-fastapi-backend.webp" alt="A backend your frontend and mobile team will enjoy using" width="960" height="720" loading="lazy">
+        <div class="kicker">Backend on FastAPI</div>
+        <h3>FastAPI backend with PostgreSQL, Redis, auth, Docker and API docs</h3>
+        <p class="muted">You get a Python backend built on FastAPI that is fast, documented and ready for real users: the API for your web app, mobile app, SaaS or internal tool.</p>
+        
+        <details>
+          <summary>More</summary>
+          
+            <p class="muted">What is included:</p>
+          
+            <ul class="ticks"><li>REST API with automatic OpenAPI docs your frontend and mobile developers can use from day one</li><li>PostgreSQL with SQLAlchemy and Alembic migrations, Redis for caching, sessions and rate limits</li><li>authentication: email and password with argon2, JWT or sessions, OAuth login, roles</li><li>background jobs with Celery or arq, scheduled tasks, file uploads to S3</li><li>real-time updates with WebSockets or server-sent events</li><li>tests with pytest, Docker Compose for local dev, CI/CD deploy to a VPS or AWS</li></ul>
+          
+            <p class="muted">My own platform, Norboten, runs on this stack: FastAPI, PostgreSQL and Redis, with accounts, a device-code login for its terminal app, Glicko-2 skill ratings, live terminal sessions streamed to the browser through Redis pub/sub, rate limits, Prometheus metrics, a chat assistant on a local Ollama model and an MCP server for Claude. 1,000+ tests across the project.</p>
+          
+            <p class="muted">I also have 7+ years of Flutter apps for iOS and Android, and React frontends before that, so the API is designed around what the client apps actually need.</p>
+          
+        </details>
+        
+        <p class="tags"><span class="tag">fastapi</span><span class="tag">python backend</span><span class="tag">rest api</span><span class="tag">postgresql</span><span class="tag">api development</span></p>
+        <a class="more" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="project-13">See the packages on Upwork →</a>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Hire me">
+  <div class="wrap band-inner">
+    <div>
+      <h2>Have a similar task?</h2>
+      <p class="muted">Invite me to your job on Upwork, or buy one of the projects above. I reply
+        with honest questions and a plan, not a template.</p>
+    </div>
+    <a class="btn solid big" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="middle">Invite me on Upwork</a>
+  </div>
+</section>
+
+<section class="section" id="journey">
+  <div class="wrap">
+    <div class="kicker">git log</div>
+    <h2>How I got here</h2>
+    <p class="prose muted">For years I shipped complete products on my own: mobile apps (Flutter, iOS and Android), web frontends (React, Vue), and the backends behind them (Python, Node.js, Java). The other half was the database, the cloud, the release pipeline and the Linux servers underneath, which I provisioned, hardened and kept running.</p><p class="prose muted">I did not learn Linux from tutorials. I learned it because I was the one on call when something broke at 2am and there was nobody to escalate to.</p>
+    <ol class="timeline">
+      
+      <li class="head">
+        <div class="commit mono">
+          <span class="hash">7e9917a</span>
+          <span class="ref">(HEAD → now)</span>
+          <span class="date">Aug 2025 to Present</span>
+        </div>
+        <h3>Linux Engineer | Python &amp; AI Automation | Ansible, Terraform, AWS</h3>
+        <p class="muted">Linux engineering and administration: server provisioning, hardening and troubleshooting, automated with Ansible and Python; AWS environments with Terraform; AI agents on Claude Code that run engineering chores in CI with tool allowlists, turn caps and cost limits; private AI on Ollama for data that must stay in-house; MCP servers that give Claude a product&#39;s API and data. Built Norboten, a platform that teaches Linux on real broken VMs: QEMU/KVM + Lima, FastAPI, PostgreSQL, Redis, Ollama, Prometheus, Grafana, Ansible, GitHub Actions, Claude Code, an MCP server.</p>
+        <p class="tags"><span class="tag">Linux (Ubuntu, Debian, Fedora, Rocky, Alpine)</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Ansible</span><span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Claude Code</span><span class="tag">Claude Agent SDK</span><span class="tag">MCP</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">OpenAI / Anthropic / Gemini APIs</span><span class="tag">Ollama</span></p>
+      </li>
+      
+      <li class="">
+        <div class="commit mono">
+          <span class="hash">ef98860</span>
+          
+          <span class="date">Oct 2024 to Aug 2025</span>
+        </div>
+        <h3>Backend &amp; DevOps Engineer, Mobile Development</h3>
+        <p class="muted">Owned products end to end: Python and Dart backends, cloud infrastructure as code, container orchestration, automated release pipelines, and LLM features in production. Flutter was the client layer; everything behind it was mine too.</p>
+        <p class="tags"><span class="tag">Python</span><span class="tag">Dart/Flutter</span><span class="tag">AWS</span><span class="tag">Google Cloud</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">Firebase</span><span class="tag">Supabase</span></p>
+      </li>
+      
+      <li class="">
+        <div class="commit mono">
+          <span class="hash">f233a3d</span>
+          
+          <span class="date">Dec 2018 to Oct 2024</span>
+        </div>
+        <h3>Full-Stack Mobile Developer</h3>
+        <p class="muted">Six+ years shipping cross-platform apps together with the backends and infrastructure behind them: real-time and data-driven architectures, Linux servers, databases, release automation to the App Store and Google Play. Solo ownership throughout.</p>
+        <p class="tags"><span class="tag">Flutter/Dart</span><span class="tag">Python</span><span class="tag">Linux</span><span class="tag">Google Cloud</span><span class="tag">Firebase</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">SQLite</span></p>
+      </li>
+      
+      <li class="">
+        <div class="commit mono">
+          <span class="hash">a49fe05</span>
+          
+          <span class="date">2015 to 2018</span>
+        </div>
+        <h3>Full-Stack JavaScript Developer</h3>
+        <p class="muted">Web applications and data visualization for production use, deployed and maintained on Linux.</p>
+        <p class="tags"><span class="tag">JavaScript (React, D3)</span><span class="tag">Node.js</span><span class="tag">Python/Django</span><span class="tag">MongoDB</span><span class="tag">Linux</span></p>
+      </li>
+      
+      <li class="">
+        <div class="commit mono">
+          <span class="hash">5cb5f91</span>
+          
+          <span class="date">2010 to 2013</span>
+        </div>
+        <h3>Java Developer</h3>
+        <p class="muted">Enterprise web applications. Oracle Certified Professional, Java Programmer.</p>
+        <p class="tags"><span class="tag">Java</span><span class="tag">GWT</span><span class="tag">Oracle DB</span></p>
+      </li>
+      
+      <li class="">
+        <div class="commit mono">
+          <span class="hash">e346873</span>
+          
+          <span class="date">2006 to 2008</span>
+        </div>
+        <h3>Web Developer</h3>
+        <p class="muted">First commercial projects. Linux as a daily driver ever since.</p>
+        <p class="tags"><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">MySQL</span><span class="tag">Linux</span></p>
+      </li>
+      
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="kicker">How I work</div>
+    <h2>What you can expect</h2>
+    <div class="grid three">
+      
+      <div class="card"><p>I automate the repetitive parts and leave you a system you can read and maintain: documented, in git, reproducible.</p></div>
+      
+      <div class="card"><p>One rule I keep: AI in my systems never gets open access. An agent works from a list of allowed tools with a turn and cost limit, and anything destructive waits for a human to approve it. AI that can take down production is not automation, it is a liability.</p></div>
+      
+      <div class="card"><p>If you have a Linux stack nobody wants to touch, or a process that still runs on manual steps, send me the details. I will tell you honestly what is worth automating and what is not.</p></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h2>Let's work together</h2>
+    <p class="prose muted">I would be glad to hear about your project. The easiest way to start is
+      Upwork: you get payment protection, and I get the job details in one place.</p>
+    <div class="grid three contact">
+      <div class="card primary">
+        <h3>Hire me on Upwork</h3>
+        <p class="muted">Invite me to your job, send me a message, or buy a fixed-price project.
+          Your money stays in Upwork's escrow until you approve the work.</p>
+        <a class="btn solid" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="contact">Open my Upwork profile</a>
+      </div>
+      <div class="card">
+        <h3>Found me here? Direct Contract</h3>
+        <p class="muted">If you found me outside Upwork, we can still work through it with an
+          Upwork Direct Contract. I send you the contract, you accept it with a free Upwork client
+          account, and you keep the same escrow and payment protection.
+          Write to me on LinkedIn to set one up.</p>
+        <a class="btn" href="https://www.linkedin.com/in/northelks/" rel="noopener" data-track="click_direct_contract" data-position="contact">Ask for a Direct Contract</a>
+      </div>
+      <div class="card">
+        <h3>Write to me personally</h3>
+        <p class="muted">Not sure yet, or want to talk before a job exists? Message me on
+          LinkedIn. I answer in English.</p>
+        <a class="btn" href="https://www.linkedin.com/in/northelks/" rel="noopener" data-track="click_linkedin" data-position="contact">Message me on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section no-line" id="cv">
+  <div class="wrap">
+    <div class="kicker">CV</div>
+    <h2>The one-page version</h2>
+    <p class="prose muted">Everything above on a single page: the summary, the skills, every role
+      with its dates, Norboten, education and languages. Plain text in one column, so it
+      reads the same to a person and to an applicant-tracking system.</p>
+    <p class="cta"><a class="btn solid" href="Ihar-Petushkou-CV.pdf" download data-track="click_cv" data-position="cv">Download the CV (PDF)</a></p>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">[ Ihar Petushkou ]</div>
+        <p class="muted">Linux Engineer.<br>Python &amp; AI Automation.</p>
+      </div>
+      <div>
+        <strong>Work with me</strong><br>
+        <a href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="footer">Upwork</a><br>
+        <a href="https://www.linkedin.com/in/northelks/" rel="noopener" data-track="click_linkedin" data-position="footer">LinkedIn</a><br>
+        <a href="https://github.com/northelks" rel="noopener" data-track="click_github" data-position="footer">GitHub</a>
+      </div>
+      <div>
+        <strong>Project</strong><br>
+        <a href="https://norboten.org" rel="noopener" data-track="click_norboten" data-position="footer">Norboten</a><br>
+        <a href="https://github.com/northelks/norboten" rel="noopener" data-track="click_github" data-position="footer">Norboten (GitHub)</a><br>
+        <a href="#cv" data-track="click_cv" data-position="footer">CV</a>
+      </div>
+      <div>
+        <strong>Legal</strong><br>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <p class="muted small">© 2026 Ihar Petushkou</p>
+  </div>
+</footer>
+
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to the top" title="Back to the top" hidden>
+  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V4M3.5 8.5L8 4l4.5 4.5"
+    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>(function () {
+  var hasGA = typeof window.gtag === 'function';
+  var banner = document.getElementById('consent');
+
+  function store(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
+  function read(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+
+  // Consent Mode v2: everything starts denied (in the head); a click updates it.
+  function decide(choice) {
+    store('consent', choice);
+    var v = choice === 'granted' ? 'granted' : 'denied';
+    if (hasGA) gtag('consent', 'update', {ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v});
+    if (banner) banner.hidden = true;
+  }
+  if (banner) {
+    if (!read('consent')) banner.hidden = false;
+    banner.addEventListener('click', function (e) {
+      var choice = e.target.getAttribute && e.target.getAttribute('data-consent');
+      if (choice) decide(choice);
+    });
+  }
+  document.querySelectorAll('[data-consent-reset]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (banner) banner.hidden = false;
+    });
+  });
+
+  // Every link that matters carries data-track="event_name" data-position="where on the page".
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-track]');
+    if (!el || !hasGA) return;
+    gtag('event', el.getAttribute('data-track'), {
+      position: el.getAttribute('data-position') || '',
+      link_url: el.href || '',
+      transport_type: 'beacon'
+    });
+  });
+
+  // Back to the top, once there is a page above you.
+  var top = document.getElementById('to-top');
+  if (top) {
+    var place = function () { top.hidden = window.scrollY < window.innerHeight; };
+    window.addEventListener('scroll', place, {passive: true});
+    window.addEventListener('resize', place);
+    top.addEventListener('click', function () { window.scrollTo({top: 0, behavior: 'smooth'}); });
+    place();
+  }
+
+  var video = document.querySelector('video.intro');
+  if (video && hasGA) {
+    var started = false;
+    video.addEventListener('play', function () {
+      if (!started) { started = true; gtag('event', 'video_play', {video_title: 'intro'}); }
+    });
+    video.addEventListener('ended', function () { gtag('event', 'video_complete', {video_title: 'intro'}); });
+  }
+})();
+</script>
+</body>
+</html>

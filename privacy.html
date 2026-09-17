@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Ihar Petushkou</title>
+<meta name="description" content="How this site uses Google Analytics and cookies, and how to change your choice.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://iharpetushkou.com/privacy.html">
+<meta name="author" content="Ihar Petushkou">
+<meta name="theme-color" content="#0a0e0c">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Ihar Petushkou">
+<meta property="og:title" content="Ihar Petushkou · Linux Engineer">
+<meta property="og:description" content="Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.">
+<meta property="og:url" content="https://iharpetushkou.com/">
+<meta property="og:image" content="https://iharpetushkou.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ihar Petushkou, Linux engineer: Python and AI automation, Ansible, Terraform, AWS">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Ihar">
+<meta property="profile:last_name" content="Petushkou">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ihar Petushkou · Linux Engineer">
+<meta name="twitter:description" content="Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.">
+<meta name="twitter:image" content="https://iharpetushkou.com/og.png">
+<link rel="icon" href="favicon.png" sizes="64x64" type="image/png">
+<link rel="icon" href="icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"></noscript>
+<style>/* The palette, type and components of norboten.org, trimmed for one page. */
+:root {
+  --bg: #0a0e0c; --bg-raised: #101613; --bg-sunken: #070a09;
+  --line: #1e2b24; --line-strong: #2c463a;
+  --text: #e8ece9; --muted: #93a09a; --green: #4ade80; --green-dim: #2f9e5b;
+  --red: #f87171; --amber: #fbbf24;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --wide: 1180px; --text-width: 760px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 76px; }
+body {
+  margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans);
+  font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+h1, h2, h3 { color: var(--green); line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+h1, h2 { font-family: var(--mono); }
+h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); margin: 0 0 1rem; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 1rem; }
+h3 { font-size: 1.2rem; margin: 0 0 0.6rem; }
+p { margin: 0 0 1rem; }
+strong { color: #fff; font-weight: 600; }
+img, video { max-width: 100%; height: auto; }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 0 1.25rem; }
+.wrap.narrow { max-width: 880px; }
+.prose { max-width: var(--text-width); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); }
+.small { font-size: 0.85rem; }
+.center { text-align: center; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 99; background: var(--bg-raised); padding: 0.5rem 1rem; }
+
+/* header */
+header.site {
+  position: sticky; top: 0; z-index: 30; background: rgba(10, 14, 12, 0.9);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+}
+header.site .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: 60px; }
+.brand { font-family: var(--mono); font-weight: 700; color: var(--green); letter-spacing: -0.02em; font-size: 1.02rem; white-space: nowrap; }
+nav.site { display: flex; align-items: center; gap: 1.2rem; margin-left: auto; flex-wrap: wrap; }
+nav.site a:not(.btn) { color: var(--text); font-size: 0.95rem; }
+nav.site a:not(.btn):hover { color: var(--green); text-decoration: none; }
+nav.site a.cv { padding-right: 1.2rem; border-right: 1px solid var(--line-strong); }
+nav.site a.icon { color: var(--muted); border: 1px solid var(--line-strong); border-radius: 7px; padding: 0.3rem 0.5rem; display: inline-flex; }
+nav.site a.icon:hover { color: var(--green); text-decoration: none; }
+nav.site a.icon svg { display: block; }
+@media (max-width: 760px) { nav.site a:not(.btn):not(.icon) { display: none; } }
+@media (max-width: 440px) {
+  header.site .wrap { gap: 0.6rem; }
+  header.site .brand { font-size: 0.8rem; }
+  nav.site { flex-wrap: nowrap; gap: 0.5rem; }
+  nav.site .btn.small { padding: 0.35rem 0.6rem; font-size: 0.85rem; white-space: nowrap; }
+}
+
+/* buttons */
+.cta { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; }
+.btn {
+  display: inline-block; border: 1px solid var(--green-dim); color: var(--green); border-radius: 8px;
+  padding: 0.6rem 1.15rem; font-weight: 600; font-family: var(--sans); font-size: 1rem;
+  background: none; cursor: pointer; line-height: 1.3; text-align: center;
+}
+.btn:hover { background: rgba(74, 222, 128, 0.08); text-decoration: none; }
+.btn.solid { background: var(--green); color: #07120c; border-color: var(--green); }
+.btn.solid:hover { background: #6ee7a0; }
+.btn.small { padding: 0.35rem 0.8rem; font-size: 0.9rem; }
+.btn.big { padding: 0.85rem 1.6rem; font-size: 1.08rem; }
+
+/* hero */
+.hero { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--line);
+  background: radial-gradient(800px 420px at 90% 0%, rgba(74, 222, 128, 0.08), transparent 70%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; }
+.hero h1 .soft { color: var(--text); font-size: 0.72em; white-space: nowrap; }
+.hero .lede { font-size: 1.12rem; color: var(--muted); max-width: 60ch; }
+.hero .cta { margin: 1.8rem 0 1.2rem; }
+.hero .stack { color: #6f7d76; font-size: 0.82rem; margin: 0; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } .hero { padding-top: 2.5rem; } }
+
+/* terminal card */
+.terminal { margin: 0; background: var(--bg-sunken); border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden;
+  box-shadow: 0 30px 80px -40px rgba(74, 222, 128, 0.35); }
+.terminal .bar { display: flex; align-items: center; gap: 7px; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--line); background: var(--bg-raised); }
+.terminal .bar span { width: 11px; height: 11px; border-radius: 50%; background: #2a3530; }
+.terminal .bar em { font-style: normal; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin-left: 0.6rem; }
+.terminal .screen { padding: 1.2rem 1.3rem 1.3rem; font-family: var(--mono); font-size: 0.9rem; }
+.terminal .screen p { margin: 0 0 0.15rem; }
+.terminal .prompt { color: var(--green); margin-right: 0.4rem; }
+.terminal .out { color: var(--muted); margin-bottom: 0.7rem !important; }
+.terminal .out.ok { color: var(--green); }
+.terminal .out.bad { color: var(--red); }
+
+.who .photo-frame { position: relative; width: 100%; max-width: 173px; margin: 0 auto 1.2rem; border-radius: 10px;
+  overflow: hidden; border: 1px solid var(--line-strong); }
+.who .photo-frame .photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+/* a faint green phosphor over the photo: a tint and scanlines, never enough to hide the face */
+.who .photo-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px),
+    linear-gradient(rgba(74, 222, 128, 0.10), rgba(74, 222, 128, 0.10));
+  mix-blend-mode: normal; }
+.who .monogram { width: 100%; max-width: 173px; aspect-ratio: 1; margin: 0 auto 1.2rem; border-radius: 10px;
+  border: 1px solid var(--line-strong); }
+.who .monogram { display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 3.4rem;
+  color: var(--green); background: radial-gradient(circle at 30% 20%, #15241c, var(--bg-sunken)); }
+
+/* numbers */
+.facts-strip { border-bottom: 1px solid var(--line); background: var(--bg-sunken); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding-block: 1.6rem; }
+.facts div { display: flex; flex-direction: column; }
+.facts strong { color: var(--green); font-size: 1.9rem; line-height: 1.1; }
+.facts span { color: var(--muted); font-size: 0.92rem; }
+
+/* sections */
+.section { padding: 4.5rem 0; border-bottom: 1px solid var(--line); }
+.section.no-line { border-bottom: 0; }
+.kicker { font-family: var(--mono); font-weight: 500; color: var(--green-dim); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 0.5rem; }
+.grid { display: grid; gap: 1.1rem; }
+.grid.three { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 1.3rem 1.4rem; }
+.card p:last-child { margin-bottom: 0; }
+.tag { display: inline-block; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 999px; padding: 0.1rem 0.55rem; margin: 0 0.35rem 0.35rem 0; }
+.tags { margin: 0.8rem 0; }
+ul.ticks { list-style: none; padding: 0; margin: 0 0 1rem; }
+ul.ticks li { position: relative; padding-left: 1.3rem; margin-bottom: 0.45rem; color: var(--muted); }
+ul.ticks li::before { content: "›"; position: absolute; left: 0.2rem; color: var(--green); font-family: var(--mono); font-weight: 700; }
+ul.ticks strong { color: var(--text); font-weight: 600; }
+
+/* expertise */
+.levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 1.1rem; margin-top: 2rem; }
+.level header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; }
+.level .num { color: var(--green); font-size: 1.5rem; font-weight: 700; }
+.level:nth-child(-n+2) { border-color: var(--line-strong); }
+.level ul.ticks li { font-size: 0.95rem; }
+
+/* feature rows */
+.feature-row { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2.8rem; align-items: start; }
+.feature-row.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.feature-row.flip > figure { order: 2; }
+.feature-row figure { position: sticky; top: 84px; }
+.feature-row.project { padding-block: 3rem; border-top: 1px solid var(--line); }
+.feature-row.project:first-of-type { margin-top: 2rem; }
+.feature-row h3 { font-size: 1.45rem; }
+figure.capture { margin: 0; }
+figure.capture img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-sunken); }
+figure.capture figcaption { margin-top: 0.7rem; font-size: 0.9rem; }
+a.more { font-family: var(--mono); font-size: 0.88rem; font-weight: 500; }
+@media (max-width: 900px) {
+  .feature-row, .feature-row.flip { grid-template-columns: 1fr; gap: 1.6rem; }
+  .feature-row.flip > figure { order: 0; }
+  .feature-row figure { position: static; }
+}
+
+/* project cards */
+.grid.cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 1.4rem; padding-top: 3rem; border-top: 1px solid var(--line); }
+.project-card { display: flex; flex-direction: column; padding: 0 0 1.3rem; overflow: hidden; }
+.project-card img { display: block; width: 100%; border-bottom: 1px solid var(--line); margin-bottom: 1.1rem; }
+.project-card > :not(img) { margin-left: 1.3rem; margin-right: 1.3rem; }
+.project-card h3 { font-size: 1.1rem; }
+.project-card p.muted { font-size: 0.95rem; }
+.project-card .more { margin-top: auto; }
+details { margin: 0 0 0.6rem; }
+details summary { cursor: pointer; color: var(--green); font-family: var(--mono); font-size: 0.85rem; margin-bottom: 0.6rem; }
+details ul.ticks li, details p { font-size: 0.93rem; }
+
+/* call-to-action band */
+.band { border-bottom: 1px solid var(--line); background:
+  radial-gradient(700px 300px at 15% 50%, rgba(74, 222, 128, 0.12), transparent 70%), var(--bg-sunken); }
+.band-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 3.2rem; flex-wrap: wrap; }
+.band h2 { margin-bottom: 0.4rem; }
+.band p { margin: 0; max-width: 60ch; }
+
+/* journey */
+ol.timeline { list-style: none; margin: 2.4rem 0 0; padding: 0 0 0 2rem; position: relative; max-width: 900px; }
+ol.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 2px;
+  background: linear-gradient(var(--line-strong), var(--green-dim)); }
+ol.timeline li { position: relative; padding-bottom: 2.2rem; }
+ol.timeline li::before { content: ""; position: absolute; left: -1.95rem; top: 0.35rem; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--green-dim); }
+ol.timeline li.head::before { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.18); }
+.commit { font-size: 0.82rem; display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.2rem; }
+.commit .hash { color: var(--amber); }
+.commit .ref { color: var(--green); }
+.commit .date { color: var(--muted); }
+ol.timeline h3 { color: var(--text); margin-bottom: 0.35rem; }
+ol.timeline p.muted { margin-bottom: 0.4rem; }
+ol.timeline .tags { margin: 0.4rem 0 0; }
+
+/* video */
+video.intro { width: 100%; border-radius: 12px; border: 1px solid var(--line-strong); background: #000; margin-top: 1rem; }
+
+/* contact */
+.contact { margin-top: 2rem; }
+.contact .card { display: flex; flex-direction: column; }
+.contact .card .btn { margin-top: auto; align-self: flex-start; }
+.contact .card.primary { border-color: var(--green-dim); background: linear-gradient(180deg, rgba(74, 222, 128, 0.06), transparent 60%), var(--bg-raised); }
+
+/* footer */
+footer.site { border-top: 1px solid var(--line); padding: 2.5rem 0 3rem; color: var(--muted); font-size: 0.92rem; }
+footer.site .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--green); }
+
+/* back to the top, as on norboten.org */
+.to-top { position: fixed; right: 1.4rem; bottom: 1.4rem; z-index: 39; width: 44px; height: 44px; display: grid;
+  place-items: center; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--bg-raised);
+  color: var(--muted); cursor: pointer; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45); }
+.to-top[hidden] { display: none; }
+.to-top:hover { color: var(--green); border-color: var(--green-dim); }
+
+/* cookie banner */
+.consent { position: fixed; z-index: 50; left: 1rem; right: 1rem; bottom: 1rem; max-width: 560px; margin-left: auto;
+  background: var(--bg-raised); border: 1px solid var(--line-strong); border-radius: 12px; padding: 1rem 1.2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); font-size: 0.92rem; }
+.consent p { margin-bottom: 0.7rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://iharpetushkou.com/#person",
+   "name": "Ihar Petushkou",
+   "jobTitle": "Linux Engineer",
+   "description": "Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.",
+   "url": "https://iharpetushkou.com/",
+   "image": "https://iharpetushkou.com/img/photo.webp",
+   "sameAs": [
+    "https://www.upwork.com/freelancers/~017c9a21e436ba9f1f",
+    "https://www.linkedin.com/in/northelks/",
+    "https://github.com/northelks"
+   ],
+   "knowsAbout": [
+    "Linux",
+    "Linux system administration",
+    "systemd",
+    "SELinux",
+    "Bash",
+    "Nginx",
+    "KVM",
+    "Python",
+    "FastAPI",
+    "AI automation",
+    "AI agents",
+    "Claude Code",
+    "Model Context Protocol",
+    "Ollama",
+    "OpenAI API",
+    "Ansible",
+    "Terraform",
+    "Amazon Web Services",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "GitHub Actions",
+    "Prometheus",
+    "Grafana",
+    "PostgreSQL"
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://iharpetushkou.com/#service",
+   "name": "Ihar Petushkou: Linux engineering, Python & AI automation",
+   "url": "https://iharpetushkou.com/",
+   "image": "https://iharpetushkou.com/og.png",
+   "description": "Linux engineer for hire: server setup, hardening and troubleshooting, Python and AI automation, Ansible, Terraform and AWS. 15+ years in software.",
+   "founder": {
+    "@id": "https://iharpetushkou.com/#person"
+   },
+   "areaServed": "Worldwide",
+   "availableLanguage": "English",
+   "sameAs": [
+    "https://www.upwork.com/freelancers/~017c9a21e436ba9f1f",
+    "https://www.linkedin.com/in/northelks/",
+    "https://github.com/northelks"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Linux server setup, hardening, troubleshooting: Ubuntu, Debian, RHEL",
+       "description": "You get a Linux server that is set up properly, secured, and easy to maintain. Or, if something is already broken, you get it found and fixed with a clear explanation of the cause."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Python automation scripts, integrations and AWS tools, with tests",
+       "description": "You get Python code that does a real job and keeps doing it: a script, a CLI tool, an integration between two systems, a scraper, a data pipeline, or an automation on AWS."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AI agents and AI automation with Python, Claude, OpenAI or local LLMs",
+       "description": "You get AI automation that takes real work off your team, not a chatbot demo. Emails sorted and answered in draft, support tickets routed, leads qualified, invoices and PDFs turned into clean data, weekly reports written from your numbers."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Bash and Python scripts for Linux: backups, deploys, cleanup, cron",
+       "description": "You get Bash or Python scripts that automate the boring Linux work and do not break in surprising ways: backups, deploys, log and release cleanup, health checks, user management, report generation."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Infrastructure as code with Terraform, Ansible and Docker Compose",
+       "description": "You get infrastructure you can rebuild from zero with three commands, instead of a server someone set up by hand two years ago."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "AWS infrastructure setup with Terraform: VPC, EC2, RDS, S3, IAM, ECS",
+       "description": "You get your application running on AWS the right way: secure by default, reproducible, and without a surprise bill at the end of the month."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Claude Code setup and AI agents for your team: CI, hooks, plugins",
+       "description": "You get Claude Code working for your whole team, not only on one laptop: shared rules in git, safe permissions, and agents that take routine engineering work off people."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "MCP server for Claude: connect your API, database and tools safely",
+       "description": "You get an MCP server that lets Claude work with your own systems: your API, database, internal tools or product data, with the access you decide."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Self-hosted LLMs with Ollama: private AI server, RAG and team chat",
+       "description": "You get AI that runs on your own servers: your documents, customer data and code never go to OpenAI, Google or anyone else, and there is no bill per token."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "KVM/QEMU virtualization on VPS, dedicated or on-prem Linux servers",
+       "description": "You get your own servers working like a small private cloud: a VPS, a dedicated machine or an on-prem box running your services in VMs or containers, secured, backed up and monitored."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "CI/CD pipeline on GitHub Actions, GitLab CI or Jenkins, auto deploy",
+       "description": "You get a pipeline where every push is tested and every merge is deployed, without anyone copying files to a server or running commands by hand."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Prometheus and Grafana monitoring, dashboards and alerts",
+       "description": "You get dashboards that show what your servers and apps are doing right now, and alerts that wake the right person only when something really needs attention."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "OpenAI, Claude or Gemini API integration into your app or backend",
+       "description": "You get AI features built into your product properly: fast, reliable, with a predictable cost, and safe to put in front of real users."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Telegram, WhatsApp, Discord or Slack bot with AI and integrations",
+       "description": "You get a bot that does useful work where your customers and team already are: Telegram, WhatsApp, Discord, Slack or Viber."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "FastAPI backend with PostgreSQL, Redis, auth, Docker and API docs",
+       "description": "You get a Python backend built on FastAPI that is fast, documented and ready for real users: the API for your web app, mobile app, SaaS or internal tool."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://iharpetushkou.com/#website",
+   "url": "https://iharpetushkou.com/",
+   "name": "Ihar Petushkou",
+   "publisher": {
+    "@id": "https://iharpetushkou.com/#person"
+   },
+   "inLanguage": "en"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">[ Ihar Petushkou ]</a>
+    <nav class="site" aria-label="Sections">
+      
+      <a href="./">Home</a>
+      
+      <a class="cv" href="./#cv" data-track="click_cv" data-position="header">CV</a>
+      <a class="btn solid small" href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="header">Hire me on Upwork</a>
+      <a class="icon" href="https://www.linkedin.com/in/northelks/" rel="noopener" aria-label="LinkedIn" title="LinkedIn" data-track="click_linkedin" data-position="header"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section no-line">
+  <div class="wrap narrow prose">
+    <div class="kicker">Privacy</div>
+    <h1>Privacy</h1>
+    <p class="muted">Last updated 2026.</p>
+
+    <h2>Who runs this site</h2>
+    <p>Ihar Petushkou, a freelance Linux engineer. You can reach me on
+      <a href="https://www.linkedin.com/in/northelks/" rel="noopener">LinkedIn</a> or
+      <a href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener">Upwork</a>.</p>
+
+    <h2>What is collected</h2>
+    
+    <p>Nothing. This site sets no cookies and runs no analytics.</p>
+    
+    <p>The page loads fonts from Google Fonts, which sees your IP address when it sends them.</p>
+    <p>The site keeps no accounts, forms or databases. Your cookie choice is stored in your own
+      browser (local storage) and nowhere else.</p>
+
+    <h2>Your rights</h2>
+    <p>You can decline or withdraw consent at any time with the link above, block cookies in your
+      browser, or use Google's
+      <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out add-on</a>.
+      How Google uses data: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>.
+      For any other question about your data, write to me on LinkedIn.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">[ Ihar Petushkou ]</div>
+        <p class="muted">Linux Engineer.<br>Python &amp; AI Automation.</p>
+      </div>
+      <div>
+        <strong>Work with me</strong><br>
+        <a href="https://www.upwork.com/freelancers/~017c9a21e436ba9f1f" rel="noopener" data-track="click_upwork" data-position="footer">Upwork</a><br>
+        <a href="https://www.linkedin.com/in/northelks/" rel="noopener" data-track="click_linkedin" data-position="footer">LinkedIn</a><br>
+        <a href="https://github.com/northelks" rel="noopener" data-track="click_github" data-position="footer">GitHub</a>
+      </div>
+      <div>
+        <strong>Project</strong><br>
+        <a href="https://norboten.org" rel="noopener" data-track="click_norboten" data-position="footer">Norboten</a><br>
+        <a href="https://github.com/northelks/norboten" rel="noopener" data-track="click_github" data-position="footer">Norboten (GitHub)</a><br>
+        <a href="./#cv" data-track="click_cv" data-position="footer">CV</a>
+      </div>
+      <div>
+        <strong>Legal</strong><br>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <p class="muted small">© 2026 Ihar Petushkou</p>
+  </div>
+</footer>
+
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to the top" title="Back to the top" hidden>
+  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V4M3.5 8.5L8 4l4.5 4.5"
+    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>(function () {
+  var hasGA = typeof window.gtag === 'function';
+  var banner = document.getElementById('consent');
+
+  function store(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
+  function read(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+
+  // Consent Mode v2: everything starts denied (in the head); a click updates it.
+  function decide(choice) {
+    store('consent', choice);
+    var v = choice === 'granted' ? 'granted' : 'denied';
+    if (hasGA) gtag('consent', 'update', {ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v});
+    if (banner) banner.hidden = true;
+  }
+  if (banner) {
+    if (!read('consent')) banner.hidden = false;
+    banner.addEventListener('click', function (e) {
+      var choice = e.target.getAttribute && e.target.getAttribute('data-consent');
+      if (choice) decide(choice);
+    });
+  }
+  document.querySelectorAll('[data-consent-reset]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (banner) banner.hidden = false;
+    });
+  });
+
+  // Every link that matters carries data-track="event_name" data-position="where on the page".
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-track]');
+    if (!el || !hasGA) return;
+    gtag('event', el.getAttribute('data-track'), {
+      position: el.getAttribute('data-position') || '',
+      link_url: el.href || '',
+      transport_type: 'beacon'
+    });
+  });
+
+  // Back to the top, once there is a page above you.
+  var top = document.getElementById('to-top');
+  if (top) {
+    var place = function () { top.hidden = window.scrollY < window.innerHeight; };
+    window.addEventListener('scroll', place, {passive: true});
+    window.addEventListener('resize', place);
+    top.addEventListener('click', function () { window.scrollTo({top: 0, behavior: 'smooth'}); });
+    place();
+  }
+
+  var video = document.querySelector('video.intro');
+  if (video && hasGA) {
+    var started = false;
+    video.addEventListener('play', function () {
+      if (!started) { started = true; gtag('event', 'video_play', {video_title: 'intro'}); }
+    });
+    video.addEventListener('ended', function () { gtag('event', 'video_complete', {video_title: 'intro'}); });
+  }
+})();
+</script>
+</body>
+</html>
