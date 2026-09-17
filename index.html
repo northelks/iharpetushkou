@@ -256,6 +256,16 @@ footer.site a:hover { color: var(--green); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+try { if (localStorage.getItem('consent') === 'granted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+gtag('js', new Date());
+gtag('config', 'G-6M1CPJMM09');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6M1CPJMM09"></script>
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -1202,13 +1212,23 @@ footer.site a:hover { color: var(--green); }
       </div>
       <div>
         <strong>Legal</strong><br>
-        <a href="privacy.html">Privacy</a>
+        <a href="privacy.html">Privacy</a><br>
+        <a href="#" data-consent-reset>Cookie settings</a>
       </div>
     </div>
     <p class="muted small">© 2026 Ihar Petushkou</p>
   </div>
 </footer>
 
+
+<div class="consent" id="consent" role="dialog" aria-label="Cookies" hidden>
+  <p>I use Google Analytics cookies to see which parts of this page are useful. Nothing else, and
+    nothing is sold. <a href="privacy.html">Privacy</a></p>
+  <div class="cta">
+    <button class="btn solid small" type="button" data-consent="granted">Accept</button>
+    <button class="btn small" type="button" data-consent="denied">Decline</button>
+  </div>
+</div>
 
 <button class="to-top" id="to-top" type="button" aria-label="Back to the top" title="Back to the top" hidden>
   <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V4M3.5 8.5L8 4l4.5 4.5"
